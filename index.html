@@ -4,14 +4,21 @@
   <title>Chromecraft Furnishers | Office Furniture Manufacturer in Gurgaon</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chromecraft Furnishers provides office furniture and workspace solutions including workstations, chairs, tables, and custom interiors in Gurgaon.">
+  <meta name="description" content="Chromecraft Furnishers provides premium office furniture and workspace solutions in Gurgaon including workstations, chairs, tables and custom interiors.">
 
   <style>
+    :root {
+      --brand: #e6892f;
+      --dark: #1e2a32;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f2f2f2;
       color: #222;
+      background:
+        linear-gradient(rgba(20,30,40,0.65), rgba(20,30,40,0.65)),
+        url('bg.jpg') center / cover no-repeat fixed;
     }
 
     .wrapper {
@@ -19,59 +26,71 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 30px 15px;
+      padding: 40px 20px;
     }
 
     .card {
-      background: linear-gradient(180deg, #ffffff, #fafafa);
-      max-width: 640px;
+      background: rgba(255,255,255,0.97);
+      max-width: 720px;
       width: 100%;
-      padding: 50px 45px;
+      padding: 55px 50px;
       text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+      border-radius: 10px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+      animation: fadeUp 0.9s ease-out;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .logo {
-      max-width: 140px;
-      margin-bottom: 20px;
+      max-width: 150px;
+      margin-bottom: 18px;
     }
 
     h1 {
       margin: 10px 0 6px;
-      font-size: 28px;
+      font-size: 30px;
+      color: var(--dark);
     }
 
     .tagline {
       font-size: 15px;
       color: #555;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
 
     .divider {
       height: 1px;
       background: #ddd;
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
     .services {
-      font-size: 14px;
+      font-size: 14.5px;
       color: #444;
-      line-height: 1.7;
-      margin-bottom: 25px;
+      line-height: 1.8;
+      margin-bottom: 28px;
     }
 
     .contact {
       font-size: 14px;
       color: #333;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      line-height: 1.7;
+      margin-bottom: 28px;
     }
 
     .contact strong {
       display: block;
-      margin-top: 12px;
-      font-weight: bold;
+      margin-top: 14px;
     }
 
     .contact a {
@@ -84,32 +103,49 @@
     }
 
     .cta {
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
     .cta a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       color: #fff;
-      background: #111;
-      padding: 12px 26px;
+      background: var(--brand);
+      padding: 13px 28px;
       margin: 6px;
-      font-size: 14px;
-      border-radius: 4px;
+      font-size: 14.5px;
+      border-radius: 6px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .cta a.secondary {
-      background: #444;
+      background: #4b4b4b;
     }
 
     .cta a.map {
       background: #1a73e8;
     }
 
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
     .footer {
-      font-size: 12px;
+      font-size: 12.5px;
       color: #777;
-      margin-top: 20px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 40px 25px;
+      }
+      h1 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -119,22 +155,18 @@
   <div class="wrapper">
     <div class="card">
 
-      <!-- Logo -->
       <img src="logo.png" alt="Chromecraft Furnishers" class="logo">
 
-      <!-- Heading -->
       <h1>Chromecraft Furnishers</h1>
       <div class="tagline">Office Furniture & Workspace Solutions</div>
 
       <div class="divider"></div>
 
-      <!-- Services -->
       <div class="services">
         Workstations · Office Chairs · Tables · Storage Units<br>
         Conference Rooms · Custom Office Interiors
       </div>
 
-      <!-- Contact -->
       <div class="contact">
         <strong>Address</strong>
         <a href="https://www.google.com/maps/search/?api=1&query=Chromecraft+Furnishers+Sector+62+Gurgaon" target="_blank">
@@ -147,24 +179,5 @@
         <a href="mailto:info@chromecraft.com">info@chromecraft.com</a>
 
         <strong>Website</strong>
-        <a href="https://www.chromecraft.com" target="_blank">www.chromecraft.com</a>
-      </div>
+        <a href="https://www.chro
 
-      <!-- CTA -->
-      <div class="cta">
-        <a href="https://wa.me/919818330844" target="_blank">WhatsApp Us</a>
-        <a href="tel:+919818330844" class="secondary">Call Now</a>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Chromecraft+Furnishers+Sector+62+Gurgaon" target="_blank" class="map">
-          Get Directions
-        </a>
-      </div>
-
-      <div class="footer">
-        Website under development. Full catalogue coming soon.
-      </div>
-
-    </div>
-  </div>
-
-</body>
-</html>
